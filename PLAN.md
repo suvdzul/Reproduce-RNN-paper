@@ -40,7 +40,7 @@ First create an admission list for admissions in the ICU between 2008 and 2012, 
 
 For non-temporal outcome variables, get each patient's ICD-9 Codes for the admission and their mortality labels. 
 
-For mortality, 3 columns will be added:
+For mortality, 3 columns:
 * in-hospital mortality: deathtime is not null
 * 48 < mortality: deathtime - admittime > 48 hrs if deathtime not null
 * Patients who were alive for the first 48 hours after admission are included, thus exclude_mortality_under48 column will be added which would be an indicator variable for deathtime - admittime <= 48. 
