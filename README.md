@@ -1,2 +1,2 @@
-# Reproduce-RNN-paper
-Reproducing RNN paper in MIMIC - IV
+# Replicate-RNN-paper
+Replicating RNN paper in MIMIC - IV
