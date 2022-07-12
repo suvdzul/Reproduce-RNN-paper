@@ -10,7 +10,7 @@ Original Study:
 * Title: Recurrent Neural Networks for Multivariate Time Series with Missing Values
 * DOI:10.1038/s41598-018-24271-9
 
-Reproduction Study:
+Reproduction/Replication Study:
 * Title: Replicate-RNN-paper: RNN missing value
 * DOI:10.5281/zenodo.6678012
 
