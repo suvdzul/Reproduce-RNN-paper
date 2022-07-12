@@ -56,105 +56,105 @@ For all the variables listed below, the value and the timestamp will be extracte
 
 Variable name | Description (item id) | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
-Gastric Gastric Tube |  | First 48 hrs after admission |  | outputevents | 
-Stool Out Stool | | First 48 hrs after admission |  | outputevents | 
-Urine Out Incontinent | | First 48 hrs after admission |  | outputevents | 
-Ultrafiltrate| | First 48 hrs after admission |  | outputevents | 
+Gastric Gastric Tube | 226571,226573,226575,226576 | First 48 hrs after admission |  | outputevents | 
+Stool Out Stool | 226579| First 48 hrs after admission |  | outputevents | 
+Urine Out Incontinent | 226627| First 48 hrs after admission |  | outputevents | 
+Ultrafiltrate|226583 | First 48 hrs after admission |  | outputevents | 
 Foley| | First 48 hrs after admission |  | outputevents | 
 Void| |First 48 hrs after admission  |  | outputevents | 
 Condom Cath| | First 48 hrs after admission |  | outputevents | 
-Fecal Bag| | First 48 hrs after admission |  | outputevents | 
-Ostomy (Output)| | First 48 hrs after admission |  | outputevents | 
-Chest Tube #1| |First 48 hrs after admission  |  | outputevents | 
-Chest Tube #2| | First 48 hrs after admission |  | outputevents | 
-Jackson Pratt #1| | First 48 hrs after admission |  | outputevents | 
-OR EBL| | First 48 hrs after admission |  | outputevents | 
-Pre-Admission| | First 48 hrs after admission |  | outputevents | 
-TF Residual| | First 48 hrs after admission |  | outputevents | 
-Albumin 5%| | First 48 hrs after admission |  | inputevents | 
+Fecal Bag|226580, 227701 | First 48 hrs after admission |  | outputevents | 
+Ostomy (Output)| 226582| First 48 hrs after admission |  | outputevents | 
+Chest Tube #1|226588 |First 48 hrs after admission  |  | outputevents | 
+Chest Tube #2|226589 | First 48 hrs after admission |  | outputevents | 
+Jackson Pratt #1|226599 | First 48 hrs after admission |  | outputevents | 
+OR EBL|226626 | First 48 hrs after admission |  | outputevents | 
+Pre-Admission|226633 | First 48 hrs after admission |  | outputevents | 
+TF Residual|227510, 227511 | First 48 hrs after admission |  | outputevents | 
+Albumin 5%|220864 | First 48 hrs after admission |  | inputevents | 
 Dextrose 5%| | First 48 hrs after admission |  | inputevents | 
-Fresh Frozen Plasma| |First 48 hrs after admission  |  | inputevents | 
-Lorazepam (Ativan)| | First 48 hrs after admission |  | inputevents | 
-Calcium Gluconate| | First 48 hrs after admission |  | inputevents | 
-Midazolam (Versed)| | First 48 hrs after admission |  | inputevents | 
-Phenylephrine| | First 48 hrs after admission |  | inputevents | 
-Furosemide (Lasix)| | First 48 hrs after admission |  | inputevents | 
-Hydralazine| | First 48 hrs after admission |  | inputevents | 
-Norepinephrine| | First 48 hrs after admission |  | inputevents | 
-Magnesium Sulfate| |First 48 hrs after admission  |  | inputevents | 
-Nitroglycerin| | First 48 hrs after admission |  | inputevents | 
-Insulin - Regular| | First 48 hrs after admission |  | inputevents | 
+Fresh Frozen Plasma| 220970|First 48 hrs after admission  |  | inputevents | 
+Lorazepam (Ativan)| 221385| First 48 hrs after admission |  | inputevents | 
+Calcium Gluconate| 221456| First 48 hrs after admission |  | inputevents | 
+Midazolam (Versed)|221668 | First 48 hrs after admission |  | inputevents | 
+Phenylephrine| 221749| First 48 hrs after admission |  | inputevents | 
+Furosemide (Lasix)| 221794| First 48 hrs after admission |  | inputevents | 
+Hydralazine| 221828| First 48 hrs after admission |  | inputevents | 
+Norepinephrine| 221906| First 48 hrs after admission |  | inputevents | 
+Magnesium Sulfate|222011 |First 48 hrs after admission  |  | inputevents | 
+Nitroglycerin| 222056| First 48 hrs after admission |  | inputevents | 
+Insulin - Regular| 223258, 223262| First 48 hrs after admission |  | inputevents | 
 Insulin - Glargine| | First 48 hrs after admission |  | inputevents | 
 Insulin - Humalog| | First 48 hrs after admission |  | inputevents | 
 Heparin Sodium| | First 48 hrs after admission |  | inputevents | 
-Morphine Sulfate| | First 48 hrs after admission |  | inputevents | 
-Potassium Chloride| | First 48 hrs after admission |  | inputevents | 
-Packed Red Blood Cells| |  First 48 hrs after admission|  | inputevents |
-Gastric Meds| | First 48 hrs after admission |  | inputevents | 
-D5 1/2NS| |First 48 hrs after admission  |  | inputevents | 
-LR| | First 48 hrs after admission |  | inputevents | 
-K Phos| | First 48 hrs after admission |  | inputevents | 
-Solution| | First 48 hrs after admission |  | inputevents | 
-Sterile Water| | First 48 hrs after admission |  | inputevents | 
+Morphine Sulfate| 225154| First 48 hrs after admission |  | inputevents | 
+Potassium Chloride|225166 | First 48 hrs after admission |  | inputevents | 
+Packed Red Blood Cells| 225168|  First 48 hrs after admission|  | inputevents |
+Gastric Meds| 225799| First 48 hrs after admission |  | inputevents | 
+D5 1/2NS|225823 |First 48 hrs after admission  |  | inputevents | 
+LR| 225828| First 48 hrs after admission |  | inputevents | 
+K Phos|225834 | First 48 hrs after admission |  | inputevents | 
+Solution|225943 | First 48 hrs after admission |  | inputevents | 
+Sterile Water|225944 | First 48 hrs after admission |  | inputevents | 
 Metoprolol| | First 48 hrs after admission |  | inputevents | 
-Piggyback| |First 48 hrs after admission  |  | inputevents | 
-OR Crystalloid Intake| | First 48 hrs after admission |  | inputevents |
-OR Cell Saver Intake| | First 48 hrs after admission |  | inputevents | 
-PO Intake| |  First 48 hrs after admission|  | inputevents | 
-GT Flush| | First 48 hrs after admission |  | inputevents | 
-KCL (Bolus)| |First 48 hrs after admission  |  | inputevents | 
-Magnesium Sulfate (Bolus)| | First 48 hrs after admission |  | inputevents |
-Hematocrit| | First 48 hrs after admission |  | labevents |
+Piggyback| 226089|First 48 hrs after admission  |  | inputevents | 
+OR Crystalloid Intake|226364 | First 48 hrs after admission |  | inputevents |
+OR Cell Saver Intake| 226372| First 48 hrs after admission |  | inputevents | 
+PO Intake|226452 |  First 48 hrs after admission|  | inputevents | 
+GT Flush|226453 | First 48 hrs after admission |  | inputevents | 
+KCL (Bolus)|227522 |First 48 hrs after admission  |  | inputevents | 
+Magnesium Sulfate (Bolus)|222011, 227523, 227524 | First 48 hrs after admission |  | inputevents |
+Hematocrit|51221 | First 48 hrs after admission |  | labevents |
 White Blood Cells| |First 48 hrs after admission  |  | labevents |
-Platelet Count| |First 48 hrs after admission  |  | labevents |
-Hemoglobin| | First 48 hrs after admission |  | labevents |
-MCHC| |First 48 hrs after admission  |  | labevents |
-MCH| |First 48 hrs after admission  |  | labevents |
-MCV| |First 48 hrs after admission  |  | labevents |
-Red Blood Cells| |  First 48 hrs after admission|  | labevents |
-RDW| |  First 48 hrs after admission|  | labevents |
+Platelet Count|51265 |First 48 hrs after admission  |  | labevents |
+Hemoglobin|51222 | First 48 hrs after admission |  | labevents |
+MCHC|51249 |First 48 hrs after admission  |  | labevents |
+MCH|51248 |First 48 hrs after admission  |  | labevents |
+MCV| 51250|First 48 hrs after admission  |  | labevents |
+Red Blood Cells|51279 |  First 48 hrs after admission|  | labevents |
+RDW|51277 |  First 48 hrs after admission|  | labevents |
 Potassium| | First 48 hrs after admission |  | labevents |
 Sodium| | First 48 hrs after admission |  | labevents |
-Chloride| | First 48 hrs after admission |  | labevents |
+Chloride|50902 | First 48 hrs after admission |  | labevents |
 Bicarbonate| | First 48 hrs after admission |  | labevents |
-Anion Gap| |First 48 hrs after admission  |  | labevents |
+Anion Gap| 50868|First 48 hrs after admission  |  | labevents |
 Urea Nitrogen| | First 48 hrs after admission |  | labevents |
-Creatinine| |First 48 hrs after admission  |  | labevents |
-Glucose| | First 48 hrs after admission |  | labevents |
-Magnesium| |First 48 hrs after admission  |  | labevents |
-Total Calcium| |First 48 hrs after admission  |  | labevents |
-Phosphate| |First 48 hrs after admission  |  | labevents |
-INR(PT)| | First 48 hrs after admission |  | labevents |
-PT| | First 48 hrs after admission |  | labevents |
-PTT| |First 48 hrs after admission  |  | labevents |
-Lymphocytes| | First 48 hrs after admission |  | labevents |
-Monocytes| | First 48 hrs after admission |  | labevents |
-Neutrophils| |First 48 hrs after admission  |  | labevents |
-Basophils| | First 48 hrs after admission |  | labevents |
-Eosinophils| |First 48 hrs after admission  |  | labevents |
+Creatinine|50912 |First 48 hrs after admission  |  | labevents |
+Glucose|50931 | First 48 hrs after admission |  | labevents |
+Magnesium|50960 |First 48 hrs after admission  |  | labevents |
+Total Calcium| 50893|First 48 hrs after admission  |  | labevents |
+Phosphate|50970 |First 48 hrs after admission  |  | labevents |
+INR(PT)| 51237| First 48 hrs after admission |  | labevents |
+PT| 51274| First 48 hrs after admission |  | labevents |
+PTT|51275 |First 48 hrs after admission  |  | labevents |
+Lymphocytes|51244 | First 48 hrs after admission |  | labevents |
+Monocytes|51254 | First 48 hrs after admission |  | labevents |
+Neutrophils|51256 |First 48 hrs after admission  |  | labevents |
+Basophils|51146 | First 48 hrs after admission |  | labevents |
+Eosinophils|51200 |First 48 hrs after admission  |  | labevents |
 Total Bilirubin| | First 48 hrs after admission |  | labevents |
-PH| | First 48 hrs after admission |  | labevents |
-Base Excess| |First 48 hrs after admission  |  | labevents |
-Calculated Total CO2| |First 48 hrs after admission  |  | labevents |
+PH| 50820| First 48 hrs after admission |  | labevents |
+Base Excess|50802 |First 48 hrs after admission  |  | labevents |
+Calculated Total CO2| 50804|First 48 hrs after admission  |  | labevents |
 PO2| |First 48 hrs after admission  |  | labevents |
-PCO2| |First 48 hrs after admission  |  | labevents |
-PH| | First 48 hrs after admission |  | labevents |
-Specific Gravity| | First 48 hrs after admission |  | labevents |
-Lactate| | First 48 hrs after admission |  | labevents |
-Alanine Aminotransferase (ALT)| |First 48 hrs after admission  |  | labevents |
-Asparate Aminotransferase (AST)| |First 48 hrs after admission  |  | labevents |
-Alkaline Phosphatase| | First 48 hrs after admission |  | labevents |
-Albumin| |First 48 hrs after admission  |  | labevents |
-Aspirin| |First 48 hrs after admission  |  | prescription |
-Bisacodyl| |First 48 hrs after admission  |  | prescription |
-Docusate Sodium| | First 48 hrs after admission |  | prescription |
-DSW| | First 48 hrs after admission |  | prescription |
-Humulin-R Insulin| |First 48 hrs after admission  |  | prescription |
-Potassium Chloride| | First 48 hrs after admission |  | prescription |
-Magnesium Sulfate| |First 48 hrs after admission  |  | prescription |
-Metoprolol Tartrate| | First 48 hrs after admission |  | prescription |
-Sodium Chloride 0.9% Flush| | First 48 hrs after admission |  | prescription |
-Pantoprazole| | First 48 hrs after admission |  | prescription |
+PCO2| 50818|First 48 hrs after admission  |  | labevents |
+PH| 51491| First 48 hrs after admission |  | labevents |
+Specific Gravity|51498 | First 48 hrs after admission |  | labevents |
+Lactate|50813 | First 48 hrs after admission |  | labevents |
+Alanine Aminotransferase (ALT)| 50861|First 48 hrs after admission  |  | labevents |
+Asparate Aminotransferase (AST)|50878 |First 48 hrs after admission  |  | labevents |
+Alkaline Phosphatase| 50863| First 48 hrs after admission |  | labevents |
+Albumin|50862 |First 48 hrs after admission  |  | labevents |
+Aspirin|ASA325, ASA81 |First 48 hrs after admission  |  | prescription |
+Bisacodyl| BISA10R, BISA5|First 48 hrs after admission  |  | prescription |
+Docusate Sodium| DOCU100| First 48 hrs after admission |  | prescription |
+DSW|HEPBASE | First 48 hrs after admission |  | prescription |
+Humulin-R Insulin| INHRIV, INSULIN|First 48 hrs after admission  |  | prescription |
+Potassium Chloride|KCL40I, MICROK10 | First 48 hrs after admission |  | prescription |
+Magnesium Sulfate|MAG2PM |First 48 hrs after admission  |  | prescription |
+Metoprolol Tartrate|METO25, METO50 | First 48 hrs after admission |  | prescription |
+Sodium Chloride 0.9% Flush| 	NACLFLUSH, NS1000| First 48 hrs after admission |  | prescription |
+Pantoprazole|	PANT40, PANT40I | First 48 hrs after admission |  | prescription |
 
 If unsure about the source, write all possibilities, and justify them in the notes.
 Also include in the notes whether outliers were processed (and how), as well as the approach for missing data.
