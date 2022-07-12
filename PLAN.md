@@ -52,7 +52,7 @@ Group the ICD-9 Codes as the Table 2 in Section 3.4 of the Supplementary Informa
 List out the planned source for all covariates and exposures extracted for the study, e.g. admission source.
 If describing a time-varying covariate, be specific regarding the aggregation and the time window (e.g. "lowest mean arterial pressure during the first 24 hours of the ICU stay."). The following template is a useful guide.
 
-For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission.
+For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are TBD.
 
 Variable name | Description (item id) | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
