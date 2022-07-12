@@ -19,7 +19,7 @@ Reproduction Study:
 The original dataset used for the study was MIMIC-III, which is different than the one that will be used for replication.
 
 The dataset to be used for the replication:
-* Dataset name and version: MIMIC-IV
+* Dataset name and version: MIMIC-IV v0.3
 * DOI (or link if no DOI available): https://doi.org/10.13026/a3wn-hq05
 * Citation: 
 Johnson, A., Bulgarelli, L., Pollard, T., Horng, S., Celi, L. A., & Mark, R. (2020). MIMIC-IV (version 0.4). PhysioNet. https://doi.org/10.13026/a3wn-hq05.
@@ -51,6 +51,8 @@ Group the ICD-9 Codes as the Table 2 in Section 3.4 of the Supplementary Informa
 
 List out the planned source for all covariates and exposures extracted for the study, e.g. admission source.
 If describing a time-varying covariate, be specific regarding the aggregation and the time window (e.g. "lowest mean arterial pressure during the first 24 hours of the ICU stay."). The following template is a useful guide.
+
+For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission.
 
 Variable name | Description | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
