@@ -52,7 +52,7 @@ Group the ICD-9 Codes as the Table 2 in Section 3.4 of the Supplementary Informa
 List out the planned source for all covariates and exposures extracted for the study, e.g. admission source.
 If describing a time-varying covariate, be specific regarding the aggregation and the time window (e.g. "lowest mean arterial pressure during the first 24 hours of the ICU stay."). The following template is a useful guide.
 
-For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are TBD.
+For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are TBD. Item ids in bold are manually derived from MIMIC-IV, the rest are collected from https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/Codes/mimic3_mvcv/config/99plusf.csv.
 
 Variable name | Description (item id) | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
@@ -86,7 +86,7 @@ Nitroglycerin| 222056| First 48 hrs after admission |  | inputevents |
 Insulin - Regular| 223258, 223262| First 48 hrs after admission |  | inputevents | 
 Insulin - Glargine| ****223260**** | First 48 hrs after admission |  | inputevents | 
 Insulin - Humalog|****223261, 223262****  | First 48 hrs after admission |  | inputevents | 
-Heparin Sodium|****225152, 225975, 229597, 230044**** | First 48 hrs after admission |  | inputevents | 
+Heparin Sodium|****225152**** | First 48 hrs after admission |  | inputevents | 
 Morphine Sulfate| 225154| First 48 hrs after admission |  | inputevents | 
 Potassium Chloride|225166 | First 48 hrs after admission |  | inputevents | 
 Packed Red Blood Cells| 225168|  First 48 hrs after admission|  | inputevents |
@@ -105,7 +105,7 @@ GT Flush|226453 | First 48 hrs after admission |  | inputevents |
 KCL (Bolus)|227522 |First 48 hrs after admission  |  | inputevents | 
 Magnesium Sulfate (Bolus)|222011, 227523, 227524 | First 48 hrs after admission |  | inputevents |
 Hematocrit|51221 | First 48 hrs after admission |  | labevents |
-White Blood Cells| |First 48 hrs after admission  |  | labevents |
+White Blood Cells|****51755, 51756, 51301**** |First 48 hrs after admission  |  | labevents |
 Platelet Count|51265 |First 48 hrs after admission  |  | labevents |
 Hemoglobin|51222 | First 48 hrs after admission |  | labevents |
 MCHC|51249 |First 48 hrs after admission  |  | labevents |
@@ -113,12 +113,12 @@ MCH|51248 |First 48 hrs after admission  |  | labevents |
 MCV| 51250|First 48 hrs after admission  |  | labevents |
 Red Blood Cells|51279 |  First 48 hrs after admission|  | labevents |
 RDW|51277 |  First 48 hrs after admission|  | labevents |
-Potassium| | First 48 hrs after admission |  | labevents |
-Sodium| | First 48 hrs after admission |  | labevents |
+Potassium|****50833, 50971, 52610**** | First 48 hrs after admission |  | labevents |
+Sodium| ****50983, 52623****| First 48 hrs after admission |  | labevents |
 Chloride|50902 | First 48 hrs after admission |  | labevents |
-Bicarbonate| | First 48 hrs after admission |  | labevents |
+Bicarbonate|****50882**** | First 48 hrs after admission |  | labevents |
 Anion Gap| 50868|First 48 hrs after admission  |  | labevents |
-Urea Nitrogen| | First 48 hrs after admission |  | labevents |
+Urea Nitrogen| ****51006, 52647**** | First 48 hrs after admission |  | labevents |
 Creatinine|50912 |First 48 hrs after admission  |  | labevents |
 Glucose|50931 | First 48 hrs after admission |  | labevents |
 Magnesium|50960 |First 48 hrs after admission  |  | labevents |
@@ -132,11 +132,11 @@ Monocytes|51254 | First 48 hrs after admission |  | labevents |
 Neutrophils|51256 |First 48 hrs after admission  |  | labevents |
 Basophils|51146 | First 48 hrs after admission |  | labevents |
 Eosinophils|51200 |First 48 hrs after admission  |  | labevents |
-Total Bilirubin| | First 48 hrs after admission |  | labevents |
+Total Bilirubin| ****50885**** | First 48 hrs after admission |  | labevents |
 PH| 50820| First 48 hrs after admission |  | labevents |
 Base Excess|50802 |First 48 hrs after admission  |  | labevents |
 Calculated Total CO2| 50804|First 48 hrs after admission  |  | labevents |
-PO2| |First 48 hrs after admission  |  | labevents |
+PO2| ****52042, 50821****  |First 48 hrs after admission  |  | labevents |
 PCO2| 50818|First 48 hrs after admission  |  | labevents |
 PH| 51491| First 48 hrs after admission |  | labevents |
 Specific Gravity|51498 | First 48 hrs after admission |  | labevents |
