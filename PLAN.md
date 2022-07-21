@@ -60,9 +60,9 @@ Gastric Gastric Tube | 226571,226573,226575,226576 | First 48 hrs after admissio
 Stool Out Stool | 226579| First 48 hrs after admission |  | outputevents | 
 Urine Out Incontinent | 226627| First 48 hrs after admission |  | outputevents | 
 Ultrafiltrate|226583 | First 48 hrs after admission |  | outputevents | 
-Foley| | First 48 hrs after admission |  | outputevents | 
-Void| |First 48 hrs after admission  |  | outputevents | 
-Condom Cath| | First 48 hrs after admission |  | outputevents | 
+Foley|****226559**** | First 48 hrs after admission |  | outputevents | 
+Void|****226560**** |First 48 hrs after admission  |  | outputevents | 
+Condom Cath| ****226561****| First 48 hrs after admission |  | outputevents | 
 Fecal Bag|226580, 227701 | First 48 hrs after admission |  | outputevents | 
 Ostomy (Output)| 226582| First 48 hrs after admission |  | outputevents | 
 Chest Tube #1|226588 |First 48 hrs after admission  |  | outputevents | 
