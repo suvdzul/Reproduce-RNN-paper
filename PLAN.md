@@ -72,7 +72,7 @@ OR EBL|226626 | First 48 hrs after admission |  | outputevents |
 Pre-Admission|226633 | First 48 hrs after admission |  | outputevents | 
 TF Residual|227510, 227511 | First 48 hrs after admission |  | outputevents | 
 Albumin 5%|220864 | First 48 hrs after admission |  | inputevents | 
-Dextrose 5%| | First 48 hrs after admission |  | inputevents | 
+Dextrose 5%|****220949**** | First 48 hrs after admission |  | inputevents | 
 Fresh Frozen Plasma| 220970|First 48 hrs after admission  |  | inputevents | 
 Lorazepam (Ativan)| 221385| First 48 hrs after admission |  | inputevents | 
 Calcium Gluconate| 221456| First 48 hrs after admission |  | inputevents | 
@@ -84,9 +84,9 @@ Norepinephrine| 221906| First 48 hrs after admission |  | inputevents |
 Magnesium Sulfate|222011 |First 48 hrs after admission  |  | inputevents | 
 Nitroglycerin| 222056| First 48 hrs after admission |  | inputevents | 
 Insulin - Regular| 223258, 223262| First 48 hrs after admission |  | inputevents | 
-Insulin - Glargine| | First 48 hrs after admission |  | inputevents | 
-Insulin - Humalog| | First 48 hrs after admission |  | inputevents | 
-Heparin Sodium| | First 48 hrs after admission |  | inputevents | 
+Insulin - Glargine| ****223260**** | First 48 hrs after admission |  | inputevents | 
+Insulin - Humalog|****223261, 223262****  | First 48 hrs after admission |  | inputevents | 
+Heparin Sodium|****225152, 225975, 229597, 230044**** | First 48 hrs after admission |  | inputevents | 
 Morphine Sulfate| 225154| First 48 hrs after admission |  | inputevents | 
 Potassium Chloride|225166 | First 48 hrs after admission |  | inputevents | 
 Packed Red Blood Cells| 225168|  First 48 hrs after admission|  | inputevents |
@@ -96,7 +96,7 @@ LR| 225828| First 48 hrs after admission |  | inputevents |
 K Phos|225834 | First 48 hrs after admission |  | inputevents | 
 Solution|225943 | First 48 hrs after admission |  | inputevents | 
 Sterile Water|225944 | First 48 hrs after admission |  | inputevents | 
-Metoprolol| | First 48 hrs after admission |  | inputevents | 
+Metoprolol|  ****225974**** | First 48 hrs after admission |  | inputevents | 
 Piggyback| 226089|First 48 hrs after admission  |  | inputevents | 
 OR Crystalloid Intake|226364 | First 48 hrs after admission |  | inputevents |
 OR Cell Saver Intake| 226372| First 48 hrs after admission |  | inputevents | 
