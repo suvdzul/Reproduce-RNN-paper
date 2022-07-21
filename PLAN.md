@@ -33,10 +33,10 @@ The dataset to be used for the replication:
 Provide the column names for your proposed "cohort" table, which will apply all inclusion/exclusion criteria. Include the description of the criteria, the table in the dataset you will use, and how missing data will be interpreted (e.g. missing values will be assumed to include the patient).
 
 First create an admission list for admissions in the ICU between 2008 and 2012, excluding non-first admissions and create "admission id" column. Next, get item id list from inputevents, outputevents, labevents, and prescription tables. For each item id in the table, get number of units of each itemid and choose the major unit as the target of unit conversion and discard the observations with minority unit of measurement if the top one has more than 90% of the total, otherwise convert. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_timediff_above48 column will be added which indicates whether the observation is after the first 48 hours:
-* Inputevents: admittime - starttime > 48, discard events without starttime or amount/amountuom
-* Outputevents: admittime - charttime > 48, discard events without charttime or value/valueuom
-* Labevents: admittime - charttime > 48, discard events without charttime or value/valueuom/valuenum
-* Prescriptions: admittime - starttime > 48, discard events without starttime or amount/amountuom, discard none values
+* Inputevents: intime - starttime > 48, discard events without starttime or amount/amountuom
+* Outputevents: intime - charttime > 48, discard events without charttime or value/valueuom
+* Labevents: intime - charttime > 48, discard events without charttime or value/valueuom/valuenum
+* Prescriptions: intime - starttime > 48, discard events without starttime or amount/amountuom, discard none values
 
 For non-temporal outcome variables, get each patient's ICD-9 Codes for the admission and their mortality labels. 
 
