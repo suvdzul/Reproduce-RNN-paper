@@ -43,9 +43,9 @@ For non-temporal outcome variables, get each patient's ICD-9 Codes for the admis
 
 Next, using item id list from Variables section in the PLAN for inputevents, outputevents, labevents, and prescription tables. For each item id in the table, get number of units of each itemid and choose the major unit as the target of unit conversion and discard the observations with minority unit of measurement if the top one has more than 90% of the total, otherwise convert. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_timediff_above48 column will be added which indicates whether the observation is after the first 48 hours:
 * Inputevents: intime - starttime > 48, discard events without starttime or amount
-* Outputevents: intime - charttime > 48, discard events without charttime or value/valueuom
-* Labevents: intime - charttime > 48, discard events without charttime or value/valueuom/valuenum
-* Prescriptions: intime - starttime > 48, discard events without starttime or amount/amountuom, discard none values
+* Outputevents: intime - charttime > 48, discard events without charttime or value
+* Labevents: intime - charttime > 48, discard events without charttime or value/valuenum
+* Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none values
 
 
 
