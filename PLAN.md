@@ -45,10 +45,7 @@ Next, using item id list from Variables section in the PLAN for inputevents, out
 * Inputevents: intime - starttime > 48, discard events without starttime or amount
 * Outputevents: intime - charttime > 48, discard events without charttime or value
 * Labevents: intime - charttime > 48, discard events without charttime or value/valuenum
-* Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none values
-
-
-
+* Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none value
 
 
 Group the ICD-9 Codes as the Table 2 in Section 3.4 of the Supplementary Information and create columns for each of the 20 categories, indicating whether the patient had the diagnoses or the procedures during their stay in the ICU.
@@ -60,7 +57,7 @@ If describing a time-varying covariate, be specific regarding the aggregation an
 
 For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are TBD. Item ids in bold are manually derived from MIMIC-IV, the rest are collected from https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/Codes/mimic3_mvcv/config/99plusf.csv.
 
-Variable name | Description (item id) | Timing | Aggregation | Source | Notes
+Variable name | Description (item id/drug) | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
 Gastric Gastric Tube | 226571,226573,226575,226576 | First 48 hrs after admission |  | outputevents | 
 Stool Out Stool | 226579| First 48 hrs after admission |  | outputevents | 
