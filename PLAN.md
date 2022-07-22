@@ -32,18 +32,24 @@ The dataset to be used for the replication:
 
 Provide the column names for your proposed "cohort" table, which will apply all inclusion/exclusion criteria. Include the description of the criteria, the table in the dataset you will use, and how missing data will be interpreted (e.g. missing values will be assumed to include the patient).
 
-First create an admission list for admissions in the ICU between 2008 and 2012, excluding non-first admissions and create "admission id" column. Next, get item id list from inputevents, outputevents, labevents, and prescription tables. For each item id in the table, get number of units of each itemid and choose the major unit as the target of unit conversion and discard the observations with minority unit of measurement if the top one has more than 90% of the total, otherwise convert. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_timediff_above48 column will be added which indicates whether the observation is after the first 48 hours:
+First create a cohort table for ICU admissions including subject id, stay id, admission id, ICU admission time, ICU admission year, mortality status or in-hospital mortality (deathtime is not null), as well as mortality time. Then apply the following exclusions/inclusions:
+* Only include patients admitted in the ICU between 2008 and 2012 (exclude_admityear)
+* Exclude non-first admissions (exclude_stay)
+* Exclude patients with mortality under 48h (exclude_mortality_under48) where deathtime - intime <=48h.
+
+The cohort table will include mortality label which is one of the classification task.
+
+For non-temporal outcome variables, get each patient's ICD-9 Codes for the admission and their mortality labels. 
+
+Next, using item id list from Variables section in the PLAN for inputevents, outputevents, labevents, and prescription tables. For each item id in the table, get number of units of each itemid and choose the major unit as the target of unit conversion and discard the observations with minority unit of measurement if the top one has more than 90% of the total, otherwise convert. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_timediff_above48 column will be added which indicates whether the observation is after the first 48 hours:
 * Inputevents: intime - starttime > 48, discard events without starttime or amount/amountuom
 * Outputevents: intime - charttime > 48, discard events without charttime or value/valueuom
 * Labevents: intime - charttime > 48, discard events without charttime or value/valueuom/valuenum
 * Prescriptions: intime - starttime > 48, discard events without starttime or amount/amountuom, discard none values
 
-For non-temporal outcome variables, get each patient's ICD-9 Codes for the admission and their mortality labels. 
 
-For mortality, 3 columns:
-* in-hospital mortality: deathtime is not null
-* 48 < mortality: deathtime - admittime > 48 hrs if deathtime not null
-* Patients who were alive for the first 48 hours after admission are included, thus exclude_mortality_under48 column will be added which would be an indicator variable for deathtime - admittime <= 48. 
+
+
 
 Group the ICD-9 Codes as the Table 2 in Section 3.4 of the Supplementary Information and create columns for each of the 20 categories, indicating whether the patient had the diagnoses or the procedures during their stay in the ICU.
 
