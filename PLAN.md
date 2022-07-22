@@ -168,9 +168,10 @@ Also include in the notes whether outliers were processed (and how), as well as 
 ### Outcome(s)
 
 List the outcome(s) used in the study, e.g. 28-day mortality, with similar detail as the above variables.
+ICD-9 Codes were categorized into 20 classes as per Table 2 Supplementary Info. 
 
 Variable name | Description | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
-ICD Code | Codes for diagnoses/procedures during a stay | Anytime during the first 48 hours after admission | Group them accordingly into 20 categories | diagnoses_icd and procedures_icd | Create binary variables for each category indicating whether the patient was diagnosed or had a procedure for that certain category
+ICD Code | Codes for diagnoses/procedures during a stay | Anytime during the first 48 hours after admission | Categorize them accordingly into 20 categories and aggegrate by MAX occurence (1 billing for each code) for each stay | diagnoses_icd and procedures_icd | Create binary variables for each category indicating whether the patient was diagnosed or had a procedure for that certain category
 in-hospital mortality | Whether the patient died in the hospital | Anytime during the hospital stay for that admission | Deathtime not null indicates mortality | admissions | 
 48 hr < mortality |Whether the patient died 48 hours after admission | Anytime during their stay but 48 hours after admission | deathtime - admittime > 48 or not if deathtime not null| admissions | 
