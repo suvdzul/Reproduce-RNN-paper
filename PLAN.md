@@ -91,7 +91,7 @@ Magnesium Sulfate|222011 |First 48 hrs after admission  |  | inputevents |
 Nitroglycerin| 222056| First 48 hrs after admission |  | inputevents | 
 Insulin - Regular| 223258, 223262| First 48 hrs after admission |  | inputevents | 
 Insulin - Glargine| ****223260**** | First 48 hrs after admission |  | inputevents | 
-Insulin - Humalog|****223261, 223262****  | First 48 hrs after admission |  | inputevents | 
+Insulin - Humalog|****223261****  | First 48 hrs after admission |  | inputevents | 
 Heparin Sodium|****225152**** | First 48 hrs after admission |  | inputevents | 
 Morphine Sulfate| 225154| First 48 hrs after admission |  | inputevents | 
 Potassium Chloride|225166 | First 48 hrs after admission |  | inputevents | 
