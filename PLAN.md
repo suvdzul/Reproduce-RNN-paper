@@ -37,7 +37,7 @@ First create a full cohort table for ICU admissions including subject id, stay i
 * Exclude non-first admissions (exclude_stay)
 * Exclude patients with mortality under 48h (exclude_mortality_under48) where deathtime - intime <=48h.
 
-The final cohort table will include mortality label which is one of the classification task.
+The final cohort table will include subject id, stay id, admission id, as well as mortality label which is one of the classification task.
 
 For non-temporal outcome variables, get each patient's ICD-9 Codes for the admission and their mortality labels. 
 
