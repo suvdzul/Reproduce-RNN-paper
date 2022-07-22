@@ -30,6 +30,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * There were some variables with missing itemids in(https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/preprocessing/config/99plusf.csv) , in those cases, I gathered the missing itemids manually, which are highlighted in bold in the Variable section of my PLAN https://github.com/suvdzul/Reproduce-RNN-paper/blob/main/PLAN.md. 
 * Not sure how they calculated ICU stay admission years, but I calculated as the median of anchor_year_group + year of intime - anchor_year. 
 * Not sure if they excluded non-first admissions, but I only included first admission in the ICU. 
+* The aggregation for ICD-9 codes were unclear, for instance, if a patient was billed three times for ICD codes belonging to the same diagnosis group, how was that aggregated by SUM/COUNT or MAX? I chose MAX as it made more sense for multi-class classification task.
 
 
 Specify changes to the data processing and/or methodology which *may* have occurred, but you are unable to confirm due to ambiguity in the original material studied. For each difference, describe (1) the most specific reference to the approach in the original study, if possible, and (2) the approach taken in the reproduction.
