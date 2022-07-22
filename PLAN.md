@@ -168,7 +168,7 @@ Also include in the notes whether outliers were processed (and how), as well as 
 ### Outcome(s)
 
 List the outcome(s) used in the study, e.g. 28-day mortality, with similar detail as the above variables.
-ICD-9 Codes were categorized into 20 classes as per Table 2 Supplementary Info. 
+ICD-9 Codes were categorized into 20 classes (20 binary variables, i.e., one-hot-encoding) as per Table 2 Supplementary Info. Mortality after 48 hrs is binary.
 
 Variable name | Description | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
