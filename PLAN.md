@@ -32,12 +32,12 @@ The dataset to be used for the replication:
 
 Provide the column names for your proposed "cohort" table, which will apply all inclusion/exclusion criteria. Include the description of the criteria, the table in the dataset you will use, and how missing data will be interpreted (e.g. missing values will be assumed to include the patient).
 
-First create a cohort table for ICU admissions including subject id, stay id, admission id, ICU admission time, ICU admission year, mortality status or in-hospital mortality (deathtime is not null), as well as mortality time. Then apply the following exclusions/inclusions:
+First create a full cohort table for ICU admissions including subject id, stay id, admission id, ICU admission time, ICU admission year, mortality status or in-hospital mortality (deathtime is not null), as well as mortality time. Then apply the following exclusions/inclusions for the final cohort table:
 * Only include patients admitted in the ICU between 2008 and 2012 (exclude_admityear)
 * Exclude non-first admissions (exclude_stay)
 * Exclude patients with mortality under 48h (exclude_mortality_under48) where deathtime - intime <=48h.
 
-The cohort table will include mortality label which is one of the classification task.
+The final cohort table will include mortality label which is one of the classification task.
 
 For non-temporal outcome variables, get each patient's ICD-9 Codes for the admission and their mortality labels. 
 
