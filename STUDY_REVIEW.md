@@ -55,9 +55,7 @@ Gesture dataset extraction and generating process are pretty detailed in the sup
 
 Not sure how PhysioNet dataset size reduced from 8000 to 4000, and does the 554 mortality correspond to out of 4000 ICU admissions or 8000. The number of patients with in-hospital mortality, length-of-stay less than 3 days, whether the patient had a cardiac condition, and whether the patient was recovering from surgery are not stated in the paper or supplementary information. Not sure how they merged NIDiasABP, NIMAP, NISysABP to DiasABP, MAP, SysABP. 
 
-As for MIMIC-III Dataset, how did they rank the top 50 items (i.e. features/variables). What was the unit of measurement. They also aggregated the multiple readings of a feature at a
-single time stamp based on the feature type, but how did they aggregate for each variable? 
-For each of the admission records, they queried the database tables to get the ICD-9 diagnosis codes. One admission record can be associated with multiple ICD-9 codes. So which one was chosen? 
+As for MIMIC-III Dataset, they said that they chose the top 50 items (i.e. features/variables), but the chosen variables for the 4 tables are all less than 50. What was the unit of measurement for each variable? They also aggregated the multiple readings of a feature at a single time stamp based on the feature type, but how did they aggregate for each variable? For each of the admission records, they queried the database tables to get the ICD-9 diagnosis codes. One admission record can be associated with multiple ICD-9 codes, did they count the occurence of each code (or code group), or capped at maximum of 1 occurence during a stay. Also, it is unclear how they calculated admission years.
 
 ## Data extraction
 
