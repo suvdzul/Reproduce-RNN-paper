@@ -32,6 +32,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * Not sure if they excluded non-first admissions, but I only included first admission in the ICU. 
 * The aggregation for ICD-9 codes were unclear, for instance, if a patient was billed three times for ICD codes belonging to the same diagnosis group, how was that aggregated by SUM/COUNT or MAX? I chose MAX as it made more sense for multi-class classification task.
 * Itemid = 223262 - Label Insulin-Humalog 75/25 was listed as Insulin-Regular in the original study, so I kept it that way.
+* Perhaps it was because of the way I calculated admityear, but there was no admission record for 2008 included in the final cohort
 
 
 Specify changes to the data processing and/or methodology which *may* have occurred, but you are unable to confirm due to ambiguity in the original material studied. For each difference, describe (1) the most specific reference to the approach in the original study, if possible, and (2) the approach taken in the reproduction.
