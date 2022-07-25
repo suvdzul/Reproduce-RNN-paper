@@ -41,8 +41,9 @@ Specify changes to the data processing and/or methodology which *may* have occur
 A table comparing the population measures between the original and the reproduction.
 
 Population measure | Original Study | Reproduction
-Admission Records between 2008 and 2012 | 19714 | ---
-Mortality |1716 | 
+--- | --- | ---
+Admission Records between 2008 and 2012 | 19714 | 21894
+Mortality |1716 | 1492
 
 ## Comparison of results
 
