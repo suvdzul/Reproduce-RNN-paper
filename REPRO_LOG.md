@@ -44,6 +44,9 @@ Population measure | Original Study | Reproduction
 --- | --- | ---
 Admission Records between 2008 and 2012 | 19714 | 21894
 Mortality |1716 | 1492
+ICD-9 Codes| 19714 | 21892
+
+I'm not sure how when I compiled ICD-9 codes for all the admission records, it is reduced from 21894 to 21892.
 
 ## Comparison of results
 
@@ -52,6 +55,11 @@ A table of the evaluation measures comparing the results in the original study a
 Evaluation measure | Original Study | Reproduction
 --- | --- | ---
 TBD | | 
+
+The original study mentioned that the MIMIC-III dataset contains 58,000 hospital admission records of 38,645 adults and 7,875 neonates. After applying exclusions, they had 19714 admission records. My reproduction originally had 421558 admission records for patients who stayed in the ICU, after applying the following exclusions, the final cohort was 21894 ICU stays:
+- include first ICU stays only
+- include admissions between 2008 and 2012
+- include patients who were alive for the first 48h after admission
 
 ## Conclusion(s) regarding reproducibility
 
