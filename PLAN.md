@@ -39,7 +39,7 @@ First create a full cohort table for ICU admissions including subject id, stay i
 
 The final cohort table after applying inclusion/exclusion criterias will have the following columns: subject id, stay id, admission id, admission year, hours until death as well as mortality label which is one of the classification task.
 
-Since the other classification task is predicting ICD-9 codes with 20 categories, another table with subject id, stay id, admission id, and 20 columns for each category of the 20 categories of ICD-9 codes as per Table 2 of Supplementary information needs to be created. Each column would indicate whether or not the patient was billed for that diagnoses group during their ICU stay, therefore creating a binary variable for each group of codes (one-hot-encoding), thus only a maximum of one case/billing per diagnoses group would be considered. If there are any patient stays with no ICD-9 code/group, they would be excluded as well.
+Since the other classification task is predicting ICD-9 codes with 20 categories, another table with subject id, stay id, admission id, and 20 columns for each category of the 20 categories of ICD-9 codes as per Table 2  in Section 3.4 of the Supplementary information needs to be created. Each column would indicate whether or not the patient was billed for that diagnoses group during their ICU stay, therefore creating a binary variable for each group of codes, thus only a maximum of one case/billing per diagnoses group would be considered. If there are any patient stays with no ICD-9 code/group, they would be excluded as well.
 
 Next, using item id list from Variables section in the PLAN for inputevents, outputevents, labevents, and prescription tables. For each item id in the table, get number of units of each itemid and choose the major unit as the target of unit conversion and discard the observations with minority unit of measurement if the top one has more than 90% of the total, otherwise convert. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_timediff_above48 column will be added which indicates whether the observation is after the first 48 hours:
 * Inputevents: intime - starttime > 48, discard events without starttime or amount
@@ -48,7 +48,6 @@ Next, using item id list from Variables section in the PLAN for inputevents, out
 * Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none value
 
 
-Group the ICD-9 Codes as the Table 2 in Section 3.4 of the Supplementary Information and create columns for each of the 20 categories, indicating whether the patient had the diagnoses or the procedures during their stay in the ICU.
 
 ### Variables
 
@@ -165,10 +164,10 @@ Also include in the notes whether outliers were processed (and how), as well as 
 ### Outcome(s)
 
 List the outcome(s) used in the study, e.g. 28-day mortality, with similar detail as the above variables.
-ICD-9 Codes were categorized into 20 classes (20 binary variables, i.e., one-hot-encoding) as per Table 2 Supplementary Info. Mortality after 48 hrs is binary.
+ICD-9 Codes were categorized into 20 classes (20 binary variables, i.e., one-hot-encoding.. kind of?) as per Table 2 Supplementary Info. Mortality after 48 hrs is binary.
 
 Variable name | Description | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
-ICD Code | Codes for diagnoses during a stay | Anytime during the stay for patients who were alive during the first 48 hours after admission | Categorize them accordingly into 20 categories and aggegrate by MAX occurence (1 billing for each diagnosis group) for each stay | diagnoses_icd | Create binary variables for each category indicating whether the patient was diagnosed for that certain category (One-hot encoding) - One admission can have several diagnoses during a stay
+ICD Code | Codes for diagnoses during a stay | Anytime during the stay for patients who were alive during the first 48 hours after admission | Categorize them accordingly into 20 categories and aggegrate by MAX occurence (1 billing for each diagnosis group) for each stay | diagnoses_icd | Create binary variables for each category indicating whether the patient was diagnosed for that certain category - One admission can have several diagnoses during a stay (multi-task classification)
 in-hospital mortality | Whether the patient died in the hospital | Anytime during the hospital stay for that admission | Deathtime not null indicates mortality | admissions | 
 48 hr < mortality |Whether the patient died 48 hours after admission | Anytime during their stay but 48 hours after admission | deathtime - admittime > 48 or not if deathtime not null| admissions | 
