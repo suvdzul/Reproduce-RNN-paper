@@ -47,7 +47,7 @@ Admission Records between 2008 and 2012 | 19714 | 21894
 Mortality |1716 | 1492
 ICD-9 Codes| 19714 | 21892
 
-I'm not sure how when I compiled ICD-9 codes for all the admission records, it is reduced from 21894 to 21892.
+I'm not sure how, but when I compiled ICD-9 codes for all the admission records, it is reduced from 21894 to 21892. However, the distribution of the ICD-9 codes look the same as the original study.
 
 ## Comparison of results
 
