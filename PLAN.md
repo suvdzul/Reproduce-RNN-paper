@@ -30,8 +30,6 @@ The dataset to be used for the replication:
 
 ### Inclusion/Exclusion criteria
 
-Provide the column names for your proposed "cohort" table, which will apply all inclusion/exclusion criteria. Include the description of the criteria, the table in the dataset you will use, and how missing data will be interpreted (e.g. missing values will be assumed to include the patient).
-
 First create a full cohort table for ICU admissions including subject id, stay id, admission id, ICU admission time, ICU admission year, mortality status or in-hospital mortality (deathtime is not null), as well as mortality time. Then apply the following exclusions/inclusions to derive the final cohort table:
 * Only include patients admitted in the ICU between 2008 and 2012 (exclude_admityear)
 * Exclude non-first admissions (exclude_stay)
@@ -47,12 +45,7 @@ Next, using item id list from Variables section in the PLAN for inputevents, out
 * Labevents: intime - charttime > 48, discard events without charttime or value/valuenum
 * Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none value
 
-
-
 ### Variables
-
-List out the planned source for all covariates and exposures extracted for the study, e.g. admission source.
-If describing a time-varying covariate, be specific regarding the aggregation and the time window (e.g. "lowest mean arterial pressure during the first 24 hours of the ICU stay."). The following template is a useful guide.
 
 For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are TBD. Item ids in bold are manually derived from MIMIC-IV, the rest are collected from https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/Codes/mimic3_mvcv/config/99plusf.csv.
 
@@ -163,7 +156,6 @@ Also include in the notes whether outliers were processed (and how), as well as 
 
 ### Outcome(s)
 
-List the outcome(s) used in the study, e.g. 28-day mortality, with similar detail as the above variables.
 ICD-9 Codes were categorized into 20 classes (20 binary variables, i.e., one-hot-encoding.. kind of?) as per Table 2 Supplementary Info. Mortality after 48 hrs is binary.
 
 Variable name | Description | Timing | Aggregation | Source | Notes
