@@ -30,7 +30,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * There were some variables with missing itemids in(https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/preprocessing/config/99plusf.csv) , in those cases, I gathered the missing itemids manually, which are highlighted in bold in the Variable section of my PLAN https://github.com/suvdzul/Reproduce-RNN-paper/blob/main/PLAN.md. 
 * Not sure how they calculated ICU stay admission years, but I calculated as the median of anchor_year_group + year of intime - anchor_year. 
 * Not sure if they excluded non-first admissions, but I only included first admission in the ICU. 
-* The aggregation for ICD-9 codes were unclear, for instance, if a patient was billed three times for ICD codes belonging to the same diagnosis group, how was that aggregated by SUM/COUNT or MAX? I chose MAX as it made more sense for multi-class classification task.
+* The aggregation for ICD-9 codes were unclear, for instance, if a patient was billed three times for ICD codes belonging to the same diagnosis group, how was that aggregated by SUM/COUNT or MAX? I chose MAX as it made more sense for multi-task classification problem.
 * Itemid = 223262 - Label Insulin-Humalog 75/25 was listed as Insulin-Regular in the original study, so I kept it that way.
 * Perhaps it was because of the way I calculated admityear, but there was no admission record for 2008 included in the final cohort
 
@@ -47,7 +47,7 @@ Admission Records between 2008 and 2012 | 19714 | 21894
 Mortality |1716 | 1492
 ICD-9 Codes| 19714 | 21892
 
-I'm not sure how, but when I compiled ICD-9 codes for all the admission records, it is reduced from 21894 to 21892. However, the distribution of the ICD-9 codes look the same as the original study.
+I'm not sure how, but after I compiled ICD-9 codes for all the admission records, then categorized and aggregated (Max = 1 occurrence), it was reduced from 21894 to 21892. However, the distribution of the ICD-9 codes look the same as the original study.
 
 ## Comparison of results
 
@@ -61,6 +61,8 @@ The original study mentioned that the MIMIC-III dataset contains 58,000 hospital
 - include first ICU stays only
 - include admissions between 2008 and 2012
 - include patients who were alive for the first 48h after admission
+
+Each admission record is associated with 1 or more ICD-9 diagnoses codes, in total there were 5280351 diagnoses codes billed for the 21894 admission records in our cohort. After assigning the ICD-9 codes into their corresponding groups as per the 20 categories listed in Table 2 of Section 3.4 in the Supplementary Info, there were 306094 billings by ICD-9 code group. Then I aggregated the ICD-9 code groups for each admission record, by max occurence (so one billing max per admission for each code group), I had 158974 unique billings for 21892 admission records.
 
 ## Conclusion(s) regarding reproducibility
 
