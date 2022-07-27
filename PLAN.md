@@ -39,7 +39,7 @@ The final cohort table after applying inclusion/exclusion criterias will have th
 
 Since the other classification task is predicting ICD-9 codes with 20 categories, another table with subject id, stay id, admission id, and 20 columns for each category of the 20 categories of ICD-9 codes as per Table 2  in Section 3.4 of the Supplementary information needs to be created. Each column would indicate whether or not the patient was billed for that diagnoses group during their ICU stay, therefore creating a binary variable for each group of codes, thus only a maximum of one case/billing per diagnoses group would be considered. If there are any patient stays with no ICD-9 code/group, they would be excluded as well.
 
-Next, using item id list from Variables section in the PLAN for inputevents, outputevents, labevents, and prescription tables. For each item id in the table, get number of units of each itemid and choose the major unit as the target of unit conversion and discard the observations with minority unit of measurement if the top one has more than 90% of the total, otherwise convert. I will also replace the label as the majority label when itemids are duplicate. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_after48h column will be added which indicates whether the observation is after the first 48 hours:
+Next, using item id list from Variables section in the PLAN for inputevents, outputevents, labevents, and prescription tables. For each item id in the table, get number of units of each itemid and choose the major unit as the target of unit conversion and convert the minorities, as well as replace the label as the majority label. I will also replace the label as the majority label when itemids are duplicate. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_after48h column will be added which indicates whether the observation is after the first 48 hours:
 * Inputevents: intime - starttime > 48, discard events without starttime or amount
 * Outputevents: intime - charttime > 48, discard events without charttime or value
 * Labevents: intime - charttime > 48, discard events without charttime or value/valuenum
@@ -80,7 +80,7 @@ Hydralazine| 221828| First 48 hrs after admission |  | inputevents |
 Norepinephrine| 221906| First 48 hrs after admission |  | inputevents | 
 Magnesium Sulfate|222011 |First 48 hrs after admission  |  | inputevents | 
 Nitroglycerin| 222056| First 48 hrs after admission |  | inputevents | 
-Insulin - Regular| 223258, 223262| First 48 hrs after admission |  | inputevents | 
+Insulin - Regular| 223258 (91.5%), 223262 (18.5%)| First 48 hrs after admission |  | inputevents | 
 Insulin - Glargine| ****223260**** | First 48 hrs after admission |  | inputevents | 
 Insulin - Humalog|****223261****  | First 48 hrs after admission |  | inputevents | 
 Heparin Sodium|****225152**** | First 48 hrs after admission |  | inputevents | 
@@ -100,7 +100,7 @@ OR Cell Saver Intake| 226372| First 48 hrs after admission |  | inputevents |
 PO Intake|226452 |  First 48 hrs after admission|  | inputevents | 
 GT Flush|226453 | First 48 hrs after admission |  | inputevents | 
 KCL (Bolus)|227522 |First 48 hrs after admission  |  | inputevents | 
-Magnesium Sulfate (Bolus)|222011, 227523, 227524 | First 48 hrs after admission |  | inputevents |
+Magnesium Sulfate (Bolus)|222011 (58.7%), 227523 (41.2%), 227524 (0.1%) | First 48 hrs after admission |  | inputevents |
 Hematocrit|51221 | First 48 hrs after admission |  | labevents |
 White Blood Cells|****51755, 51756, 51301**** |First 48 hrs after admission  |  | labevents |
 Platelet Count|51265 |First 48 hrs after admission  |  | labevents |
