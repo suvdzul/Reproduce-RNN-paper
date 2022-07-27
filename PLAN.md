@@ -44,6 +44,7 @@ Next, using item id list from Variables section in the PLAN for inputevents, out
 * Outputevents: intime - charttime > 48, discard events without charttime or value
 * Labevents: intime - charttime > 48, discard events without charttime or value/valuenum
 * Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none value
+Then I need to create an hour variable that calculates the time difference of the event and the admission to represent the timestep of each record, which needs to be aggregated for each variable as well.
 
 ### Variables
 
