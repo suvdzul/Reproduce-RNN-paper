@@ -30,7 +30,7 @@ The dataset to be used for the replication:
 
 ### Inclusion/Exclusion criteria
 
-First create a full cohort table for ICU admissions including subject id, stay id, admission id, ICU admission time, ICU admission year, mortality status or in-hospital mortality (deathtime is not null), as well as mortality time. Then apply the following exclusions/inclusions to derive the final cohort table:
+First create a full cohort table for ICU admissions including subject id, stay id, admission id, ICU admission time (time stamp), ICU admission year, mortality status or in-hospital mortality (deathtime is not null), as well as mortality time. Then apply the following exclusions/inclusions to derive the final cohort table:
 * Only include patients admitted in the ICU between 2008 and 2012 (exclude_admityear)
 * Exclude non-first admissions (exclude_stay)
 * Exclude patients with mortality under 48h (exclude_mortality_under48) where deathtime - intime <=48h.
