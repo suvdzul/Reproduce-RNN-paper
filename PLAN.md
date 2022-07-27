@@ -80,7 +80,7 @@ Hydralazine| 221828| First 48 hrs after admission |  | inputevents |
 Norepinephrine| 221906| First 48 hrs after admission |  | inputevents | 
 Magnesium Sulfate|222011 |First 48 hrs after admission  |  | inputevents | 
 Nitroglycerin| 222056| First 48 hrs after admission |  | inputevents | 
-Insulin - Regular| 223258 (91.5%), 223262 (18.5%)| First 48 hrs after admission |  | inputevents | 
+Insulin - Regular| 223258 (86.5%), 223262 (13.5%)| First 48 hrs after admission |  | inputevents | 
 Insulin - Glargine| ****223260**** | First 48 hrs after admission |  | inputevents | 
 Insulin - Humalog|****223261****  | First 48 hrs after admission |  | inputevents | 
 Heparin Sodium|****225152**** | First 48 hrs after admission |  | inputevents | 
@@ -100,7 +100,7 @@ OR Cell Saver Intake| 226372| First 48 hrs after admission |  | inputevents |
 PO Intake|226452 |  First 48 hrs after admission|  | inputevents | 
 GT Flush|226453 | First 48 hrs after admission |  | inputevents | 
 KCL (Bolus)|227522 |First 48 hrs after admission  |  | inputevents | 
-Magnesium Sulfate (Bolus)|222011 (58.7%), 227523 (41.2%), 227524 (0.1%) | First 48 hrs after admission |  | inputevents |
+Magnesium Sulfate (Bolus)|222011 (58.9%), 227523 (40.9%), 227524 (0.2%) | First 48 hrs after admission |  | inputevents |
 Hematocrit|51221 | First 48 hrs after admission |  | labevents |
 White Blood Cells|****51755 (0%), 51756 (0%), 51301 (100%)**** |First 48 hrs after admission  |  | labevents |
 Platelet Count|51265 |First 48 hrs after admission  |  | labevents |
