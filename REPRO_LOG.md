@@ -83,17 +83,17 @@ For outputevents, I originally had 1290736 records for the cohort. The following
 - exclude records that are 48h after admission - 786978 records
 - exclude N/A charttime - none
 - exclude N/A value - none
-- exclude N/A valueuom
-- exclude 0 value
+- exclude N/A valueuom - none
+- exclude 0 value - 43706
 
-After the exclusions were applied I had 503758 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 486430 observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 487369 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 471553 observations for the cohort of 21894 admissions.
 
 For labevents, I originally had 6330384 records for the cohort. The following exclusions were applied:
 - exclude records that are 48h after admission - 4152560 records
 - exclude N/A charttime - none
 - exclude N/A value and valuenum- 8374
 - exclude N/A valueuom
-- exclude 0 value/valuenum
+- exclude 0 value and valuenum
 
 After the exclusions were applied I had 2169450 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of  observations for the cohort of 21894 admissions.
 
