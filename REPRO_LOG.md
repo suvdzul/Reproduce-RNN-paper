@@ -82,6 +82,13 @@ For outputevents, I originally had 1290736 records for the cohort. The following
 
 After the exclusions were applied I had 503758 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 486430 observations for the cohort of 21894 admissions.
 
+For labevents, I originally had  records for the cohort. The following exclusions were applied:
+- exclude records that are 48h after admission -  records
+- exclude N/A charttime - none
+- exclude N/A value and valuenum- none
+
+After the exclusions were applied I had  records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of  observations for the cohort of 21894 admissions.
+
 ## Conclusion(s) regarding reproducibility
 
 Highlight specific challenges faced during the reproduction attempt which could be improved upon in the future.
