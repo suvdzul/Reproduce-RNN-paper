@@ -64,6 +64,12 @@ The original study mentioned that the MIMIC-III dataset contains 58,000 hospital
 
 Each admission record is associated with 1 or more ICD-9 diagnoses codes, in total there were 5280351 diagnoses codes billed for the 21894 admission records in our cohort. After assigning the ICD-9 codes into their corresponding groups as per the 20 categories listed in Table 2 of Section 3.4 in the Supplementary Info, there were 306094 billings by ICD-9 code group. Then I aggregated the ICD-9 code groups for each admission record, by max occurence (so one billing max per admission for each code group), I had 158974 unique billings for 21892 admission records.
 
+For inputevents, I originally had 1449459 records for the cohort. The following exclusions were applied:
+- exclude records that are 48h after admission - 860522 records
+- exclude N/A starttime - none
+- exclude N/A amount - none
+After the exclusions were applied I had 588937 records, which was then aggregated by averaging for each variable, for each time step. 
+
 ## Conclusion(s) regarding reproducibility
 
 Highlight specific challenges faced during the reproduction attempt which could be improved upon in the future.
