@@ -23,7 +23,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * Since I'm using a different version of MIMIC, the itemids have changed as compared to the original study (https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/preprocessing/config/99plusf.csv), so I gathered only the relevant itemids from their list, which is listed in the Variable section of my PLAN https://github.com/suvdzul/Reproduce-RNN-paper/blob/main/PLAN.md. 
 * The research question was mortality during 48hrs after admission, however, they've categorized mortality as 48h, 74h, 30d, and 1 yr. I categorized mine as binary variable indicating mortality after 48hrs for patients who were alive during the first 48hrs.
 * They used deathtime and dischtime to from admissions table to find the mortality label, I used deathtime only.
-* For labels with duplicate itemids, or duplicate measurements, they've took the units/occurrences of each itemids and discarded the minorities if the major one concstituted >90% of the total, otherwise converted to the majority label's UoM. I haven't discarded any, instead I converted all of them to the target UoM, which is of the majority, and replaced the label as the majority's label.
+* For labels with duplicate itemids, or duplicate measurements, they've took the units/occurrences of each itemids and discarded the minorities if the major one constituted >90% of the total, otherwise converted to the majority itemid's UoM. I haven't discarded any, instead I converted all of them to the target UoM, which is of the majority, and replaced the labels as the majority's label (so a few covariate names might not be consistent with the original study - Supplementary Info).
 
 
 ## Unknown differences
@@ -35,6 +35,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * Itemid = 223262 - Label Insulin-Humalog 75/25 was listed as Insulin-Regular in the original study, so I kept it that way.
 * Perhaps it was because of the way I calculated admityear, but there was no admission record for 2008 included in the final cohort.
 * It wasn't clear in the orignial study, how each covariate was aggregated, it makes sense for me to average them, so I averaged them for each hour (time-step) of each covariate, for each stay.
+* I am not sure when the conversion of UoM occurred in the original study (which was done by finding the majority UoM), I did it after applying the exclusions, so it is specific to our cohort.
 
 
 Specify changes to the data processing and/or methodology which *may* have occurred, but you are unable to confirm due to ambiguity in the original material studied. For each difference, describe (1) the most specific reference to the approach in the original study, if possible, and (2) the approach taken in the reproduction.
