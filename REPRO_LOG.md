@@ -23,7 +23,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * Since I'm using a different version of MIMIC, the itemids have changed as compared to the original study (https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/preprocessing/config/99plusf.csv), so I gathered only the relevant itemids from their list, which is listed in the Variable section of my PLAN https://github.com/suvdzul/Reproduce-RNN-paper/blob/main/PLAN.md. 
 * The research question was mortality during 48hrs after admission, however, they've categorized mortality as 48h, 74h, 30d, and 1 yr. I categorized mine as binary variable indicating mortality after 48hrs for patients who were alive during the first 48hrs.
 * They used deathtime and dischtime to from admissions table to find the mortality label, I used deathtime only.
-* For labels with duplicate itemids, or duplicate measurements, they've took the units/occurrences of each itemids and discarded the minorities if the major one concstituted >90% of the total, otherwise converted to the majority label's UoM. I haven't discarded any, instead I converted all of them to the target UoM, which is of the majority
+* For labels with duplicate itemids, or duplicate measurements, they've took the units/occurrences of each itemids and discarded the minorities if the major one concstituted >90% of the total, otherwise converted to the majority label's UoM. I haven't discarded any, instead I converted all of them to the target UoM, which is of the majority, and replaced the label as the majority's label.
 
 
 ## Unknown differences
