@@ -102,7 +102,7 @@ GT Flush|226453 | First 48 hrs after admission |  | inputevents |
 KCL (Bolus)|227522 |First 48 hrs after admission  |  | inputevents | 
 Magnesium Sulfate (Bolus)|222011 (58.7%), 227523 (41.2%), 227524 (0.1%) | First 48 hrs after admission |  | inputevents |
 Hematocrit|51221 | First 48 hrs after admission |  | labevents |
-White Blood Cells|****51755, 51756, 51301**** |First 48 hrs after admission  |  | labevents |
+White Blood Cells|****51755 (0%), 51756 (0%), 51301 (100%)**** |First 48 hrs after admission  |  | labevents |
 Platelet Count|51265 |First 48 hrs after admission  |  | labevents |
 Hemoglobin|51222 | First 48 hrs after admission |  | labevents |
 MCHC|51249 |First 48 hrs after admission  |  | labevents |
@@ -110,12 +110,12 @@ MCH|51248 |First 48 hrs after admission  |  | labevents |
 MCV| 51250|First 48 hrs after admission  |  | labevents |
 Red Blood Cells|51279 |  First 48 hrs after admission|  | labevents |
 RDW|51277 |  First 48 hrs after admission|  | labevents |
-Potassium|****50833, 50971, 52610**** | First 48 hrs after admission |  | labevents |
-Sodium| ****50983, 52623****| First 48 hrs after admission |  | labevents |
+Potassium|****50833 (0%), 50971 (100%), 52610 (0%)**** | First 48 hrs after admission |  | labevents |
+Sodium| ****50983 (100%), 52623 (0%)****| First 48 hrs after admission |  | labevents |
 Chloride|50902 | First 48 hrs after admission |  | labevents |
 Bicarbonate|****50882**** | First 48 hrs after admission |  | labevents |
 Anion Gap| 50868|First 48 hrs after admission  |  | labevents |
-Urea Nitrogen| ****51006, 52647**** | First 48 hrs after admission |  | labevents |
+Urea Nitrogen| ****51006 (100%), 52647 (0%)**** | First 48 hrs after admission |  | labevents |
 Creatinine|50912 |First 48 hrs after admission  |  | labevents |
 Glucose|50931 | First 48 hrs after admission |  | labevents |
 Magnesium|50960 |First 48 hrs after admission  |  | labevents |
@@ -133,7 +133,7 @@ Total Bilirubin| ****50885**** | First 48 hrs after admission |  | labevents |
 PH| 50820| First 48 hrs after admission |  | labevents |
 Base Excess|50802 |First 48 hrs after admission  |  | labevents |
 Calculated Total CO2| 50804|First 48 hrs after admission  |  | labevents |
-PO2| ****52042, 50821****  |First 48 hrs after admission  |  | labevents |
+PO2| ****52042 (0%), 50821 (100%)****  |First 48 hrs after admission  |  | labevents |
 PCO2| 50818|First 48 hrs after admission  |  | labevents |
 PH| 51491| First 48 hrs after admission |  | labevents |
 Specific Gravity|51498 | First 48 hrs after admission |  | labevents |
