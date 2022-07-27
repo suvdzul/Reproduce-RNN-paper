@@ -42,7 +42,7 @@ Since the other classification task is predicting ICD-9 codes with 20 categories
 Next, using item id list from Variables section in the PLAN for inputevents, outputevents, labevents, and prescription tables. For labels with duplicate item ids, get number of units of each itemid and choose the major unit as the target of unit conversion and convert the minorities, as well as replace the label as the majority label. I will also replace the label as the majority label when itemids are duplicate. For each of the ICU admission records, collect both the variable value and the time-stamp of observation. Records for the first 48 hours after admission are included only, thus exclude_after48h column will be added which indicates whether the observation is after the first 48 hours:
 * Inputevents: intime - starttime > 48, discard events without starttime or amount or amountuom or zero amount
 * Outputevents: intime - charttime > 48, discard events without charttime or value or valueuom or zero value
-* Labevents: intime - charttime > 48, discard events without charttime or value/valuenum or valueuom or zero/none value
+* Labevents: intime - charttime > 48, discard events without charttime or value/valuenum or valueuom or zero/none value/valuenum
 * Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none value
 
 Then I need to create an hour variable that calculates the time difference of the event and the admission to represent the timestep of each record, which needs to be aggregated for each variable, for each timestep, for each stay as well.
