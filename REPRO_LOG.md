@@ -69,7 +69,7 @@ For inputevents, I originally had 1449459 records for the cohort. The following 
 - exclude N/A starttime - none
 - exclude N/A amount - none
 
-After the exclusions were applied I had 588937 records, which was then aggregated by averaging or summing for each variable, for each time step, for each stay. After aggregation, there were a total of 494627 observations.
+After the exclusions were applied I had 588937 records, which was then aggregated by averaging or summing for each variable, for each time step, for each stay. After aggregation, there were a total of 494627 observations for the cohort of 21894 admissions.
 
 ## Conclusion(s) regarding reproducibility
 
