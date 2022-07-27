@@ -53,21 +53,21 @@ For all the variables listed below, the value and the timestamp will be extracte
 
 Variable name | Description (item id/drug) | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
-Gastric Gastric Tube | 226571 (21.5%),226573 (4.3%),226575 (34.5%),226576 (39.5%) | First 48 hrs after admission |  | outputevents | 
+Gastric Gastric Tube | 226571 (21.6%),226573 (3.8%),226575 (30.9%),226576 (43.7%) | First 48 hrs after admission |  | outputevents | 
 Stool Out Stool | 226579| First 48 hrs after admission |  | outputevents | 
 Urine Out Incontinent | 226627| First 48 hrs after admission |  | outputevents | 
 Ultrafiltrate|226583 | First 48 hrs after admission |  | outputevents | 
 Foley|****226559**** | First 48 hrs after admission |  | outputevents | 
 Void|****226560**** |First 48 hrs after admission  |  | outputevents | 
 Condom Cath| ****226561****| First 48 hrs after admission |  | outputevents | 
-Fecal Bag|226580 (34.1%), 227701 (65.9%) | First 48 hrs after admission |  | outputevents | 
+Fecal Bag|226580 (35%), 227701 (65%) | First 48 hrs after admission |  | outputevents | 
 Ostomy (Output)| 226582| First 48 hrs after admission |  | outputevents | 
 Chest Tube #1|226588 |First 48 hrs after admission  |  | outputevents | 
 Chest Tube #2|226589 | First 48 hrs after admission |  | outputevents | 
 Jackson Pratt #1|226599 | First 48 hrs after admission |  | outputevents | 
 OR EBL|226626 | First 48 hrs after admission |  | outputevents | 
 Pre-Admission|226633 | First 48 hrs after admission |  | outputevents | 
-TF Residual|227510 (87.6%), 227511 (13.3%) | First 48 hrs after admission |  | outputevents | 
+TF Residual|227510 (87%), 227511 (13%) | First 48 hrs after admission |  | outputevents | 
 Albumin 5%|220864 | First 48 hrs after admission |  | inputevents | 
 Dextrose 5%|****220949**** | First 48 hrs after admission |  | inputevents | 
 Fresh Frozen Plasma| 220970|First 48 hrs after admission  |  | inputevents | 
