@@ -33,7 +33,8 @@ Specify changes to the data processing and/or methodology which are known to you
 * Not sure if they excluded non-first admissions, but I only included first admission in the ICU. 
 * The aggregation for ICD-9 codes were unclear, for instance, if a patient was billed three times for ICD codes belonging to the same diagnosis group, how was that aggregated by SUM/COUNT or MAX? I chose MAX as it made more sense for multi-task classification problem.
 * Itemid = 223262 - Label Insulin-Humalog 75/25 was listed as Insulin-Regular in the original study, so I kept it that way.
-* Perhaps it was because of the way I calculated admityear, but there was no admission record for 2008 included in the final cohort
+* Perhaps it was because of the way I calculated admityear, but there was no admission record for 2008 included in the final cohort.
+* It wasn't clear in the orignial study, how each covariate was aggregated, it makes sense for me to average them, so I averaged them for each hour (time-step) of each covariate, for each stay.
 
 
 Specify changes to the data processing and/or methodology which *may* have occurred, but you are unable to confirm due to ambiguity in the original material studied. For each difference, describe (1) the most specific reference to the approach in the original study, if possible, and (2) the approach taken in the reproduction.
@@ -72,7 +73,7 @@ For inputevents, I originally had 1449459 records for the cohort. The following 
 - exclude N/A starttime - none
 - exclude N/A amount - none
 
-After the exclusions were applied I had 588937 records, which was then aggregated by averaging or summing for each variable, for each time step, for each stay. After aggregation, there were a total of 494627 observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 588937 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 494627 observations for the cohort of 21894 admissions.
 
 For outputevents, I originally had  records for the cohort. The following exclusions were applied:
 - exclude records that are 48h after admission - 786978 records
