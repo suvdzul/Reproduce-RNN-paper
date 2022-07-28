@@ -97,6 +97,15 @@ For labevents, I originally had 6330384 records for the cohort. The following ex
 
 After the exclusions were applied I had 2098462 records, which was then aggregated by taking min and max of valuenum for each variable, for each time step, for each stay. After aggregation, there were a total of 2072415 observations for the cohort of 21894 admissions.
 
+For prescriptions, I originally had 274422 records for the cohort. The following exclusions were applied:
+- exclude records that are 48h after admission - 135524 records
+- exclude N/A starttime - 116
+- exclude N/A dose - 84
+- exclude N/A unit - 84
+- exclude 0 dose - 10
+
+After the exclusions were applied I had 138711 records, which was then aggregated by taking min and max of valuenum for each variable, for each time step, for each stay. After aggregation, there were a total of 2072415 observations for the cohort of 21894 admissions.
+
 ## Conclusion(s) regarding reproducibility
 
 Highlight specific challenges faced during the reproduction attempt which could be improved upon in the future.
