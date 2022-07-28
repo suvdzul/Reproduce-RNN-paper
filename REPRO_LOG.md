@@ -39,7 +39,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * It wasn't clear in the orignial study, how each covariate was aggregated, it made sense for me to average them for inputevents and outputevents, so I averaged them for each hour (time-step) of each covariate, for each stay, as for labevents, I took minimum and maximum to aggregate.
 * I am not sure when the conversion of UoM occurred in the original study (which was done by finding the majority UoM), I did it after applying the exclusions, so it is specific to our cohort.
 * Not sure if zero value/amount/valuenums were excluded from inputevents, outputevents and labevents, but I excluded them.
-* Prescriptions table's dosage aggregation was unclear, so I took the upper bound of the dosage if dosage was given as a range and then took the maximum to aggregate.
+* Prescriptions table's dosage aggregation was unclear, so I took the upper bound of the dosage if dosage was given as a range and then took the sum to aggregate.
 
 
 Specify changes to the data processing and/or methodology which *may* have occurred, but you are unable to confirm due to ambiguity in the original material studied. For each difference, describe (1) the most specific reference to the approach in the original study, if possible, and (2) the approach taken in the reproduction.
@@ -111,6 +111,6 @@ After the exclusions were applied I had 138711 records, which was then aggregate
 - Another inconsistency was prescriptions table no longer had codes/itemids, thus I used the names of the drugs to compile data.
 - I took labevents time as charttime .
 - Perhaps include data from transfer from the ICU, as well as out of hospital mortality for better prediction. 
-- Some of the events' charttime or starttime was before the ICU intime, which was replaced by 0, perhaps this was an error or it occurred in hospital before ICU stay.
-- Somehow during my calculation some events' hours were rounded up to 49 hour after admission, which was replaced by 48.
-- Outleirs need to be explored further.
+- Some of the events' charttime or starttime was before the ICU intime, which was removed, perhaps this was an error or it occurred in hospital before ICU stay.
+- Somehow during my calculation some events' hours were rounded up to 49 hour after admission, which was removed.
+- Outliers need to be explored further.
