@@ -175,6 +175,14 @@ All the input variables are normalized to be of 0 mean and 1 standard deviation.
 
 N/A.
 
+### Missing data handling
+
+All records with missing values (<=48h admission) and missing times were removed.
+
+### Outlier handling
+
+N/A
+
 ### Evaluation measures
 
 They reported the results from 5-fold cross validation in terms of area under the ROC curve (AUC score).
