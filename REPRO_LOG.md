@@ -109,8 +109,9 @@ After the exclusions were applied I had 138711 records, which was then aggregate
 - Some of the covariates with multiple itemids that I gathered from the original study needs to be double checked.
 - Prescription dosage per hour can be calculated precisely using the starttime and endtime, which was not performed in the original study since it was an update in MIMIC-IV, however, this would give more accurate results. 
 - Another inconsistency was prescriptions table no longer had codes/itemids, thus I used the names of the drugs to compile data.
-- I took labevents time as charttime .
+- I took labevents time as charttime?.
 - Perhaps include data from transfer from the ICU, as well as out of hospital mortality for better prediction. 
 - Some of the events' charttime or starttime was before the ICU intime, which was removed, perhaps this was an error or it occurred in hospital before ICU stay.
 - Somehow during my calculation some events' hours were rounded up to 49 hour after admission, which was removed.
 - Outliers need to be explored further.
+- If I am to run the models, I would transfrom the data into a wide format.
