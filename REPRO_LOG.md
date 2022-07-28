@@ -36,7 +36,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * The aggregation for ICD-9 codes were unclear, for instance, if a patient was billed three times for ICD codes belonging to the same diagnosis group, how was that aggregated by SUM/COUNT or MAX? I chose MAX as it made more sense for multi-task classification problem.
 * Itemid = 223262 - Label Insulin-Humalog 75/25 was listed as Insulin-Regular in the original study, so I kept it that way.
 * Perhaps it was because of the way I calculated admityear, but there was no admission record for 2008 included in the final cohort.
-* It wasn't clear in the orignial study, how each covariate was aggregated, it made sense for me to average them for inputevents and outputevents, so I averaged them for each hour (time-step) of each covariate, for each stay, as for labevents, I took minimum and maximum to aggregate.
+* It wasn't clear in the orignial study, how each covariate was aggregated (they just mentioned that some were summed and some were averaged for inputevents), it made sense for me to average them for inputevents and outputevents, so I averaged them for each hour (time-step) of each covariate, for each stay, as for labevents, I took minimum and maximum to aggregate.
 * I am not sure when the conversion of UoM occurred in the original study (which was done by finding the majority UoM), I did it after applying the exclusions, so it is specific to our cohort.
 * Not sure if zero value/amount/valuenums were excluded from inputevents, outputevents and labevents, but I excluded them.
 * Prescriptions table's dosage aggregation was unclear, so I took the upper bound of the dosage if dosage was given as a range and then took the sum to aggregate.
