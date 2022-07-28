@@ -24,6 +24,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * The research question was mortality during 48hrs after admission, however, they've categorized mortality as 48h, 74h, 30d, and 1 yr. I categorized mine as binary variable indicating mortality after 48hrs for patients who were alive during the first 48hrs.
 * They used deathtime and dischtime to from admissions table to find the mortality label, I used deathtime only.
 * For labels with duplicate itemids, or duplicate measurements, they've took the units/occurrences of each itemids and discarded the minorities if the major one constituted >90% of the total, otherwise converted to the majority itemid's UoM. I haven't discarded any, instead I converted all of them to the target UoM, which is of the majority, and replaced the labels as the majority's label (so a few covariate names might not be consistent with the original study - Supplementary Info).
+* Prescriptions table didn't have the itemids that I compiled from the original study, so the names of the drugs were used instead.
 
 
 ## Unknown differences
@@ -104,7 +105,7 @@ For prescriptions, I originally had 274422 records for the cohort. The following
 - exclude N/A unit - 84
 - exclude 0 dose - 10
 
-After the exclusions were applied I had 138711 records, which was then aggregated by taking min and max of valuenum for each variable, for each time step, for each stay. After aggregation, there were a total of 2072415 observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 138711 records, which was then aggregated by taking min and max of valuenum for each variable, for each time step, for each stay. After aggregation, there were a total of  observations for the cohort of 21894 admissions.
 
 ## Conclusion(s) regarding reproducibility
 
