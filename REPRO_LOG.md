@@ -74,7 +74,7 @@ For inputevents, I originally had 1449459 records for the cohort. The following 
 - exclude N/A amountuom - none
 - exclude 0 amount - 3988
 
-After the exclusions were applied I had 587844 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 493605 observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 587844 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 493605 observations for the cohort of 21894 admissions. After creating 33 time series features for 48 hours (each time step is hourly), 18.5% was missing. 
 
 For outputevents, I originally had 1290736 records for the cohort. The following exclusions were applied:
 - exclude records that are 48h after admission - 786978 records
@@ -83,7 +83,7 @@ For outputevents, I originally had 1290736 records for the cohort. The following
 - exclude N/A valueuom - none
 - exclude 0 value - 43706
 
-After the exclusions were applied I had 487369 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 471553 observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 487369 records, which was then aggregated by averaging for each variable, for each time step, for each stay. After aggregation, there were a total of 471553 observations for the cohort of 21894 admissions. After creating 15 time series features for 48 hours (each time step is hourly), 10.7% was missing.
 
 For labevents, I originally had 6330384 records for the cohort. The following exclusions were applied:
 - exclude records that are 48h after admission - 4152560 records
@@ -92,7 +92,8 @@ For labevents, I originally had 6330384 records for the cohort. The following ex
 - exclude N/A valueuom - 136832
 - exclude 0 value and valuenum - 4752 + 28
 
-After the exclusions were applied I had 2098462 records, which was then aggregated by taking min and max of valuenum for each variable, for each time step, for each stay. After aggregation, there were a total of 2072415 observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 2098462 records, which was then aggregated by taking min and max of valuenum for each variable, for each time step, for each stay. After aggregation, there were a total of 2072415 observations for the cohort of 21894 admissions. After creating 41 time series features for 48 hours (each time step is hourly), 64.1% was missing.
+
 
 For prescriptions, I originally had 274422 records for the cohort. The following exclusions were applied:
 - exclude records that are 48h after admission - 135524 records
@@ -101,7 +102,7 @@ For prescriptions, I originally had 274422 records for the cohort. The following
 - exclude N/A unit - 84
 - exclude 0 dose - 10
 
-After the exclusions were applied I had 138711 records, which was then aggregated by taking the maximum for each variable (for dosage given in ranges the upper bound was taken), for each time step, for each stay. After aggregation, there were a total of 99912 observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 138711 records, which was then aggregated by taking the maximum for each variable (for dosage given in ranges the upper bound was taken), for each time step, for each stay. After aggregation, there were a total of 99912 observations for the cohort of 21894 admissions. After creating 10 time series features for 48 hours (each time step is hourly), 14.4% was missing.
 
 ## Conclusion(s) regarding reproducibility
 
