@@ -27,6 +27,7 @@ Specify changes to the data processing and/or methodology which are known to you
 * Prescriptions table didn't have the itemids that I compiled from the original study, so the names of the drugs were used instead.
 
 
+
 ## Unknown differences
 
 * There were some variables with missing itemids in(https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/preprocessing/config/99plusf.csv) , in those cases, I gathered the missing itemids manually, which are highlighted in bold in the Variable section of my PLAN https://github.com/suvdzul/Reproduce-RNN-paper/blob/main/PLAN.md. 
@@ -35,9 +36,10 @@ Specify changes to the data processing and/or methodology which are known to you
 * The aggregation for ICD-9 codes were unclear, for instance, if a patient was billed three times for ICD codes belonging to the same diagnosis group, how was that aggregated by SUM/COUNT or MAX? I chose MAX as it made more sense for multi-task classification problem.
 * Itemid = 223262 - Label Insulin-Humalog 75/25 was listed as Insulin-Regular in the original study, so I kept it that way.
 * Perhaps it was because of the way I calculated admityear, but there was no admission record for 2008 included in the final cohort.
-* It wasn't clear in the orignial study, how each covariate was aggregated, it makes sense for me to average them, so I averaged them for each hour (time-step) of each covariate, for each stay.
+* It wasn't clear in the orignial study, how each covariate was aggregated, it made sense for me to average them for inputevents and outputevents, so I averaged them for each hour (time-step) of each covariate, for each stay, as for labevents, I took minimum and maximum to aggregate.
 * I am not sure when the conversion of UoM occurred in the original study (which was done by finding the majority UoM), I did it after applying the exclusions, so it is specific to our cohort.
 * Not sure if zero value/amount/valuenums were excluded from inputevents, outputevents and labevents, but I excluded them.
+* Prescriptions table's dosage aggregation was unclear, so I took the upper bound of the dosage if dosage was given as a range and then took the maximum to aggregate.
 
 
 Specify changes to the data processing and/or methodology which *may* have occurred, but you are unable to confirm due to ambiguity in the original material studied. For each difference, describe (1) the most specific reference to the approach in the original study, if possible, and (2) the approach taken in the reproduction.
@@ -106,7 +108,8 @@ After the exclusions were applied I had 138711 records, which was then aggregate
 - The original study was very vague about the steps they've taken to extract the data, I had to assume a lot of things. For instance, I was not sure how each variable was aggregated, so inputevents and outputevents were averaged while labevents I took min and max, and prescriptions I took max.
 - Some of the covariates with multiple itemids that I gathered from the original study needs to be double checked.
 - Prescription dosage per hour can be calculated precisely using the starttime and endtime, which was not performed in the original study since it was an update in MIMIC-IV, however, this would give more accurate results. 
-- I took labevents time as charttime 
+- Another inconsistency was prescriptions table no longer had codes/itemids, thus I used the names of the drugs to compile data.
+- I took labevents time as charttime .
 - Perhaps include data from transfer from the ICU, as well as out of hospital mortality for better prediction. 
 - Some of the events' charttime or starttime was before the ICU intime, which was replaced by 0, perhaps this was an error or it occurred in hospital before ICU stay.
 - Somehow during my calculation some events' hours were rounded up to 49 hour after admission, which was replaced by 48.
