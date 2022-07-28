@@ -56,12 +56,6 @@ I'm not sure how, but after I compiled ICD-9 codes for all the admission records
 
 ## Comparison of results
 
-A table of the evaluation measures comparing the results in the original study and the reproduction. Also include the final size of the cohort, proportion of individuals excluded, and other important summary measures for the study.
-
-Evaluation measure | Original Study | Reproduction
---- | --- | ---
-TBD | | 
-
 **Cohort**
 The original study mentioned that the MIMIC-III dataset contains 58,000 hospital admission records of 38,645 adults and 7,875 neonates. After applying exclusions, they had 19714 admission records. My reproduction originally had 421558 admission records for patients who stayed in the ICU, after applying the following exclusions, the final cohort was 21894 ICU stays:
 - include first ICU stays only
@@ -105,8 +99,15 @@ For prescriptions, I originally had 274422 records for the cohort. The following
 - exclude N/A unit - 84
 - exclude 0 dose - 10
 
-After the exclusions were applied I had 138711 records, which was then aggregated by taking min and max of valuenum for each variable, for each time step, for each stay. After aggregation, there were a total of  observations for the cohort of 21894 admissions.
+After the exclusions were applied I had 138711 records, which was then aggregated by taking the maximum for each variable (for dosage given in ranges the upper bound was taken), for each time step, for each stay. After aggregation, there were a total of 99912 observations for the cohort of 21894 admissions.
 
 ## Conclusion(s) regarding reproducibility
 
-Highlight specific challenges faced during the reproduction attempt which could be improved upon in the future.
+- The original study was very vague about the steps they've taken to extract the data, I had to assume a lot of things. For instance, I was not sure how each variable was aggregated, so inputevents and outputevents were averaged while labevents I took min and max, and prescriptions I took max.
+- Some of the covariates with multiple itemids that I gathered from the original study needs to be double checked.
+- Prescription dosage per hour can be calculated precisely using the starttime and endtime, which was not performed in the original study since it was an update in MIMIC-IV, however, this would give more accurate results. 
+- I took labevents time as charttime 
+- Perhaps include data from transfer from the ICU, as well as out of hospital mortality for better prediction. 
+- Some of the events' charttime or starttime was before the ICU intime, which was replaced by 0, perhaps this was an error or it occurred in hospital before ICU stay.
+- Somehow during my calculation some events' hours were rounded up to 49 hour after admission, which was replaced by 48.
+- Outleirs need to be explored further.
