@@ -52,7 +52,7 @@ Then I need to create an hour variable that calculates the time difference of th
 For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are:
 - inputevents and outputevents will be averaged as it was not clear how each variable was aggregated in the original study, it makes sense for me to average them.
 - labevents will be min and max
-- prescriptions will be summation (dosage given in range will be converted to median first)
+- prescriptions will be summation (dosage given in range will be converted to its upper bound first)
 
 Item ids in bold are manually derived from MIMIC-IV, the rest are collected from https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/Codes/mimic3_mvcv/config/99plusf.csv. Prescriptions table did not have the itemids listed below, thus, the names of the drugs were used.
 
