@@ -43,13 +43,13 @@ Next, using item id list from Variables section in the PLAN for inputevents, out
 * Inputevents: intime - starttime > 48, discard events without starttime or amount or amountuom or when amount is 0
 * Outputevents: intime - charttime > 48, discard events without charttime or value or valueuom or when value is 0
 * Labevents: intime - charttime > 48, discard events without charttime or value/valuenum or valueuom, or when valuenum and value is 0
-* Prescriptions: intime - starttime > 48, discard events without starttime or amount, discard none value
+* Prescriptions: intime - starttime > 48, discard events without starttime or dose or unit, or when dose is 0
 
 Then I need to create an hour variable that calculates the time difference of the event and the admission to represent the timestep of each record, which needs to be aggregated for each variable, for each timestep, for each stay as well.
 
 ### Variables
 
-For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are TBD (inputevents and outputevents will be averaged as it was not clear how each variable was aggregated in the original study, it makes sense for me to average them). Item ids in bold are manually derived from MIMIC-IV, the rest are collected from https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/Codes/mimic3_mvcv/config/99plusf.csv.
+For all the variables listed below, the value and the timestamp will be extracted for each admission id recorded for the first 48 hours after first ICU admission. Aggregation methods are TBD (inputevents and outputevents will be averaged as it was not clear how each variable was aggregated in the original study, it makes sense for me to average them). Item ids in bold are manually derived from MIMIC-IV, the rest are collected from https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/Codes/mimic3_mvcv/config/99plusf.csv. Prescriptions table did not have the itemids listed below, thus, the names of the drugs were used.
 
 Variable name | Description (item id/drug) | Timing | Aggregation | Source | Notes
 --- | --- | --- | --- | --- | ---
