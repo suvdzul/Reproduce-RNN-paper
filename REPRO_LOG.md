@@ -59,7 +59,7 @@ The original study mentioned that the MIMIC-III dataset contains 58,000 hospital
 - include admissions between 2008 and 2012
 - include patients who were alive for the first 48h after admission
 
-Each admission record is associated with 1 or more ICD-9 diagnoses codes, in total there were 306094 diagnoses codes billed for the 21894 admission records in our cohort. Each diagnosis codes were assigned into their corresponding groups as per the 20 categories listed in Table 2 of Section 3.4 in the Supplementary Info, thus creating 20 binary columns which were then aggregated by max occurence (so one billing max per admission for each code group), at the end, I had 158974 unique billings for 21892 admission records.
+Each admission record is associated with 1 or more ICD-9 diagnoses codes, making this a multi-task classification problem. In total there were 306094 diagnoses codes billed for the 21894 admission records in our cohort. All diagnoses codes were assigned to their corresponding groups as per the 20 categories listed in Table 2 of Section 3.4 in the Supplementary Info, thus creating 20 binary columns, which were then aggregated by max occurrence (so one billing max per admission for each code group), at the end, I had 158974 unique billings for 21892 admission records.
 
 **Covariates**
 For inputevents, I originally had 1449459 records for the cohort. The following exclusions were applied:
