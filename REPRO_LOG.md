@@ -15,8 +15,6 @@ Reproduction/Replication Study:
 
 ## Known differences
 
-Specify changes to the data processing and/or methodology which are known to you. For each difference, describe: (1) the original study approach, (2) the reproduction approach, (3) the justification for the change. If possible, classify the differences as major (could impact the result of the study) or minor (unlikely to change the result of the study).
-
 * The original study used MIMIC-III, I used MIMIC-IV.
 * The original study included data from transfers table, I only used ICU stays. 
 * The paper stated that they compiled all itemids and sorted them by occurence to filter to only 50 top variables with the highest occurence from inputevents, outputevent, labevents, prescriptions, chartevents and microbiologyevents tables, however, in the Supplementry Info there are 15 variables gathered from outputevents, 33 from inputevents, 41 from labevents and 10 from prescriptions. Thus I only used those selected 99 variables as covariates.
@@ -40,9 +38,6 @@ Specify changes to the data processing and/or methodology which are known to you
 * I am not sure when the conversion of UoM occurred in the original study (which was done by finding the majority UoM), I did it after applying the exclusions, so it is specific to our cohort.
 * Not sure if zero value/amount/valuenums were excluded from inputevents, outputevents and labevents, but I excluded them.
 * Prescriptions table's dosage aggregation was unclear, so I took the upper bound of the dosage if dosage was given as a range and then took the sum to aggregate.
-
-
-Specify changes to the data processing and/or methodology which *may* have occurred, but you are unable to confirm due to ambiguity in the original material studied. For each difference, describe (1) the most specific reference to the approach in the original study, if possible, and (2) the approach taken in the reproduction.
 
 ## Comparison of population
 
