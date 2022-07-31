@@ -110,4 +110,3 @@ After the exclusions were applied I had 138711 records, which was then aggregate
 - Some of the events' charttime or starttime was before the ICU intime, which was removed, perhaps this was an error or it occurred in hospital before ICU stay.
 - Somehow during my calculation some events' hours were rounded up to 49 hour after admission, which was removed.
 - Outliers need to be explored further.
-- If I am to run the models, I would transfrom the data into a wide format.
