@@ -97,7 +97,7 @@ For prescriptions, I originally had 274422 records for the cohort. The following
 - exclude N/A unit - 84
 - exclude 0 dose - 10
 
-After the exclusions were applied I had 138711 records, which was then aggregated by taking the maximum for each variable (for dosage given in ranges the upper bound was taken), for each time step, for each stay. After aggregation, there were a total of 99912 observations for the cohort of 21894 admissions. After creating 10 time series features for 48 hours (each time step is hourly), 14.4% was missing.
+After the exclusions were applied I had 138711 records, which was then aggregated by taking the sum of dosages, for dosage given in ranges the upper bound was taken. After aggregation, there were a total of 99912 observations for the cohort of 21894 admissions. After creating 10 time series features for 48 hours (each time step is hourly), 14.4% was missing.
 
 ## Conclusion(s) regarding reproducibility
 
