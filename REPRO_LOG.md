@@ -15,7 +15,7 @@ Reproduction/Replication Study:
 
 ## Known differences
 
-* The original study used MIMIC-III, I used MIMIC-IV.
+* The original study used MIMIC-III, I used MIMIC-IV. There were 19714 admission records with 1716 mortality (48h after admission) in the original study vs. mine had 21894 records with 1492 mortality. 
 * The original study included data from transfers table, I only used ICU stays. 
 * The paper stated that they compiled all itemids and sorted them by occurence to filter to only 50 top variables with the highest occurence from inputevents, outputevent, labevents, prescriptions, chartevents and microbiologyevents tables, however, in the Supplementry Info there are 15 variables gathered from outputevents, 33 from inputevents, 41 from labevents and 10 from prescriptions. Thus I only used those selected 99 variables as covariates.
 * Since I'm using a different version of MIMIC, the itemids have changed as compared to the original study (https://github.com/USC-Melady/Benchmarking_DL_MIMICIII/blob/master/preprocessing/config/99plusf.csv), so I gathered only the relevant itemids from their list, which is listed in the Variable section of my PLAN https://github.com/suvdzul/Reproduce-RNN-paper/blob/main/PLAN.md. 
