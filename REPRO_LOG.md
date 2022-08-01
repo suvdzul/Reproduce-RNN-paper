@@ -109,4 +109,4 @@ After the exclusions were applied I had 138711 records, which was then aggregate
 - Perhaps include data from transfer from the ICU, as well as out of hospital mortality for better prediction. 
 - Some of the events' charttime or starttime was before the ICU intime, which was removed during exploratory analysis, perhaps this was an error or it occurred in hospital before ICU stay.
 - Somehow during my calculation some events' hours were rounded up to 49 hour after admission, which was removed during exploratory analysis.
-- Outliers need to be explored further.
+- Outliers handling were not mentioned in the study, which needs to be explored further.
