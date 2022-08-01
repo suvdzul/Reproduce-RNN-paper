@@ -23,6 +23,7 @@ Reproduction/Replication Study:
 * They used deathtime and dischtime to from admissions table to find the mortality label, I used deathtime only.
 * For labels with duplicate itemids, or duplicate measurements, they've took the units/occurrences of each itemids and discarded the minorities if the major one constituted >90% of the total, otherwise converted to the majority itemid's UoM. I haven't discarded any, instead I converted all of them to the target UoM, which is of the majority, and replaced the labels as the majority's label (so a few covariate names might not be consistent with the original study - Supplementary Info).
 * Prescriptions table didn't have the itemids that I compiled from the original study, so the names of the drugs were used instead.
+* They've assigned indeces to the covariates as per Table 1 of the Supplementary Info, I've kept their names (for duplicates I replaced with the majority) and assigned indeces at the end.
 
 
 
